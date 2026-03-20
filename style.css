@@ -1,0 +1,94 @@
+/* 整體背景 */
+body {
+    background-color: #fbf9cc;
+    background-image: url(https://i.imgur.com/0C1CQ84.png);
+    background-repeat: repeat-x;
+    font-family: "微軟正黑體", sans-serif;
+    line-height: 1.6;
+}
+
+/* 外框 */
+#wrap {
+    width: 800px;
+    margin: 40px auto;
+    padding: 40px 60px;
+    border-radius: 20px;
+    border: 2px solid #f6bb9e;
+    background-color: #fff;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* 主標題 */
+h1 {
+    color: #6fbb9a;
+    text-align: center;
+    font-size: 250%;
+    letter-spacing: 3px;
+}
+
+/* 副標題 */
+h2 {
+    color: #6fbb9a;
+    border: #94c8b1 1px dotted;
+    border-left: #d0e35b 10px solid;
+    padding: 8px 20px;
+    margin-top: 40px;
+}
+
+/* 角色標題 */
+h3 {
+    color: #ff9aa2;
+}
+
+/* 主圖片 */
+.main-img {
+    display: block;
+    margin: 20px auto;
+    border-radius: 15px;
+}
+
+/* 角色列表 */
+.character-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* 每個角色卡片 */
+.character-list li {
+    background: #fff8f0;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+/* 角色圖片 */
+.character-list img {
+    width: 180px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+/* 文字 */
+p {
+    color: #555;
+}
+
+/* 按鈕 */
+.btn {
+    display: block;
+    width: 250px;
+    text-align: center;
+    margin: 40px auto 0;
+    padding: 12px;
+    background-color: #ffb7b2;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background-color: #ff9aa2;
+}
