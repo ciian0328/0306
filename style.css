@@ -1,107 +1,140 @@
-/* 整體背景 */
+/* 🌼 整體設定 */
 body {
-    background-color: #fbf9cc;
+    background-color: #fffbea;
     background-image: url(https://i.imgur.com/0C1CQ84.png);
     background-repeat: repeat-x;
-    font-family: "微軟正黑體", sans-serif;
-    line-height: 1.6;
+    font-family: "微軟正黑體", "Noto Sans TC", sans-serif;
+    line-height: 1.8;
 }
 
-aside nav {
-  border-radius: 16px;
-  background-color: #ffffff;
-  box-shadow: 0px 0px 8px rgba(0,0,0,0.16);
-  padding: 24px 28px;
-  margin-bottom: 24px;
-}
-aside nav h2 {
-  margin-bottom: 18px;
-  font-size: 22px;
-  font-weight: bold;
-  color: #7c5d48;
-}
-aside nav ul {
-  font-size: 14px;
-}
-
-/* 外框 */
+/* 🌸 外框 */
 #wrap {
-    width: 1200px;
+    max-width: 1200px;
+    width: 90%;
     margin: 40px auto;
-    padding: 40px 60px;
-    border-radius: 20px;
+    padding: 40px;
+    border-radius: 25px;
     border: 2px solid #f6bb9e;
-    background-color: #fff;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    background-color: #ffffff;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
     display: flex;
-    justify-content: space-between;
+    gap: 30px;
 }
 
-/* 主標題 */
+/* 📱 RWD */
+@media (max-width: 768px) {
+    #wrap {
+        flex-direction: column;
+    }
+
+    main, aside {
+        width: 100%;
+    }
+}
+
+/* 🧸 主內容 */
+main {
+    width: 70%;
+}
+
+aside {
+    width: 30%;
+}
+
+/* 🌟 sticky側邊 */
+.sidebar {
+    position: sticky;
+    top: 20px;
+}
+
+/* 🧁 側邊卡片 */
+aside nav {
+    border-radius: 20px;
+    background: linear-gradient(145deg, #ffffff, #fff4ec);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+aside nav:hover {
+    transform: translateY(-5px);
+}
+
+/* 🏷 標題 */
 h1 {
     color: #6fbb9a;
     text-align: center;
-    font-size: 250%;
-    letter-spacing: 3px;
+    font-size: 260%;
+    letter-spacing: 4px;
 }
 
-/* 副標題 */
 h2 {
     color: #6fbb9a;
-    border: #94c8b1 1px dotted;
-    border-left: #d0e35b 10px solid;
-    padding: 8px 20px;
+    border-left: 8px solid #d0e35b;
+    background: #f4fff8;
+    padding: 10px 20px;
     margin-top: 40px;
+    border-radius: 10px;
 }
 
-/* 角色標題 */
 h3 {
     color: #ff9aa2;
 }
 
-/* 主圖片 */
+/* 🖼 圖片 */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .main-img {
     display: block;
     margin: 20px auto;
-    border-radius: 15px;
+    border-radius: 20px;
 }
 
-/* 角色列表 */
+/* 📦 角色卡片 */
 .character-list {
     list-style: none;
     padding: 0;
 }
 
-/* 每個角色卡片 */
 .character-list li {
-    background: #fff8f0;
+    background: linear-gradient(145deg, #fff8f0, #fff1e6);
     margin: 20px 0;
     padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
     text-align: center;
+    transition: 0.3s;
 }
 
-/* 角色圖片 */
+.character-list li:hover {
+    transform: translateY(-8px) scale(1.02);
+}
+
+/* 🧸 角色圖片 */
 .character-list img {
     width: 180px;
-    border-radius: 10px;
+    border-radius: 15px;
     margin: 10px 0;
 }
 
-/* 文字 */
+/* ✏️ 文字 */
 p {
     color: #555;
 }
 
-/* 按鈕 */
+/* 🍡 按鈕 */
 .btn {
     display: block;
-    width: 250px;
+    width: 260px;
     text-align: center;
     margin: 40px auto 0;
-    padding: 12px;
-    background-color: #ffb7b2;
+    padding: 14px;
+    background: linear-gradient(135deg, #ffb7b2, #ff9aa2);
     color: white;
     text-decoration: none;
     border-radius: 30px;
@@ -109,48 +142,50 @@ p {
 }
 
 .btn:hover {
-    background-color: #ff9aa2;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255,154,162,0.4);
 }
 
-/* 回到頂部按鈕 */
+/* 🔝 TOP按鈕 */
 #top {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #ffb7b2;
+    background: linear-gradient(135deg, #ffb7b2, #ff9aa2);
     color: white;
-    padding: 10px 15px;
+    padding: 12px 16px;
     border-radius: 50px;
     text-decoration: none;
     font-size: 14px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
     transition: 0.3s;
 }
 
 #top:hover {
-    background-color: #ff9aa2;
+    transform: translateY(-3px);
 }
 
+/* 🧭 導覽列 */
 header nav ul {
-  display: flex;
-  justify-content: center;
-  border-top: 2px solid #7c5d48;
-  border-bottom: 2px solid #7c5d48;
-  background-color: rgba(255,255,255,0.42);
-  padding: 12px 0px 10px;
+    display: flex;
+    justify-content: center;
+    border-top: 2px solid #7c5d48;
+    border-bottom: 2px solid #7c5d48;
+    background-color: rgba(255,255,255,0.6);
+    padding: 12px 0;
 }
+
 header nav ul li {
-  margin: 0 20px;
+    margin: 0 20px;
 }
+
 header nav ul li a {
-  font-size: 22px;
-  font-weight: bold;
-  color: #7c5d48;
+    font-size: 20px;
+    font-weight: bold;
+    color: #7c5d48;
+    transition: 0.3s;
 }
+
 header nav ul li a:hover {
-  text-decoration: underline double;
-}
-.sidebar {
-  position: sticky;
-  top: 20px;
+    color: #ff9aa2;
 }
