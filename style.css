@@ -1,10 +1,12 @@
-/* 🌼 整體設定 */
+/* 🌼 整體設定（藍色療癒風） */
 body {
-    background-color: #fffbea;
+    background-color: #eaf6ff;
     background-image: url(https://i.imgur.com/0C1CQ84.png);
     background-repeat: repeat-x;
+
     font-family: "微軟正黑體", "Noto Sans TC", sans-serif;
     line-height: 1.8;
+    margin: 0;
 }
 
 /* 🌸 外框 */
@@ -14,9 +16,11 @@ body {
     margin: 40px auto;
     padding: 40px;
     border-radius: 25px;
-    border: 2px solid #f6bb9e;
-    background-color: #ffffff;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+
+    border: 2px solid #a7d8ff;
+    background-color: rgba(255,255,255,0.85);
+
+    box-shadow: 0 10px 25px rgba(0,80,150,0.15);
 
     display: flex;
     gap: 30px;
@@ -42,7 +46,7 @@ aside {
     width: 30%;
 }
 
-/* 🌟 sticky側邊 */
+/* 🌟 sticky 側邊 */
 .sidebar {
     position: sticky;
     top: 20px;
@@ -51,10 +55,13 @@ aside {
 /* 🧁 側邊卡片 */
 aside nav {
     border-radius: 20px;
-    background: linear-gradient(145deg, #ffffff, #fff4ec);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+
+    background: linear-gradient(145deg, #ffffff, #eef6ff);
+    box-shadow: 0 6px 15px rgba(0,80,150,0.08);
+
     padding: 20px;
     margin-bottom: 20px;
+
     transition: 0.3s;
 }
 
@@ -64,23 +71,25 @@ aside nav:hover {
 
 /* 🏷 標題 */
 h1 {
-    color: #6fbb9a;
+    color: #2f7fbf;
     text-align: center;
     font-size: 260%;
     letter-spacing: 4px;
+    text-shadow: 0 3px 10px rgba(0,0,0,0.1);
 }
 
 h2 {
-    color: #6fbb9a;
-    border-left: 8px solid #d0e35b;
-    background: #f4fff8;
+    color: #3a8fd1;
+    border-left: 8px solid #7ec8ff;
+    background: #eef8ff;
+
     padding: 10px 20px;
     margin-top: 40px;
     border-radius: 10px;
 }
 
 h3 {
-    color: #ff9aa2;
+    color: #2f5f8f;
 }
 
 /* 🖼 圖片 */
@@ -102,11 +111,13 @@ img {
 }
 
 .character-list li {
-    background: linear-gradient(145deg, #fff8f0, #fff1e6);
+    background: linear-gradient(145deg, #f7fbff, #eaf4ff);
     margin: 20px 0;
     padding: 20px;
+
     border-radius: 20px;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+    box-shadow: 0 6px 15px rgba(0,80,150,0.1);
+
     text-align: center;
     transition: 0.3s;
 }
@@ -132,18 +143,24 @@ p {
     display: block;
     width: 260px;
     text-align: center;
+
     margin: 40px auto 0;
     padding: 14px;
-    background: linear-gradient(135deg, #ffb7b2, #ff9aa2);
+
+    background: linear-gradient(135deg, #4fa3ff, #6cc3ff);
     color: white;
     text-decoration: none;
+
     border-radius: 30px;
+
+    box-shadow: 0 8px 20px rgba(79,163,255,0.4);
+
     transition: 0.3s;
 }
 
 .btn:hover {
-    transform: scale(1.05);
-    box-shadow: 0 5px 15px rgba(255,154,162,0.4);
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(79,163,255,0.6);
 }
 
 /* 🔝 TOP按鈕 */
@@ -151,13 +168,18 @@ p {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: linear-gradient(135deg, #ffb7b2, #ff9aa2);
+
+    background: linear-gradient(135deg, #4fa3ff, #6cc3ff);
     color: white;
+
     padding: 12px 16px;
     border-radius: 50px;
+
     text-decoration: none;
     font-size: 14px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
+    box-shadow: 0 5px 15px rgba(0,80,150,0.3);
+
     transition: 0.3s;
 }
 
@@ -169,10 +191,16 @@ p {
 header nav ul {
     display: flex;
     justify-content: center;
-    border-top: 2px solid #7c5d48;
-    border-bottom: 2px solid #7c5d48;
-    background-color: rgba(255,255,255,0.6);
+
+    border-top: 2px solid #7fbce9;
+    border-bottom: 2px solid #7fbce9;
+
+    background-color: rgba(180,220,255,0.3);
+    backdrop-filter: blur(6px);
+
     padding: 12px 0;
+    margin: 0;
+    list-style: none;
 }
 
 header nav ul li {
@@ -180,12 +208,40 @@ header nav ul li {
 }
 
 header nav ul li a {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
-    color: #7c5d48;
+
+    color: #2f5f8f;
+    text-decoration: none;
+
+    padding: 6px 12px;
+    border-radius: 20px;
+
     transition: 0.3s;
 }
 
 header nav ul li a:hover {
-    color: #ff9aa2;
+    background: linear-gradient(135deg, #4fa3ff, #6cc3ff);
+    color: white;
+}
+.homeBtn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 16px;
+
+    background: linear-gradient(135deg, #4fa3ff, #6cc3ff);
+    color: white;
+
+    text-decoration: none;
+    border-radius: 25px;
+
+    box-shadow: 0 6px 15px rgba(79,163,255,0.4);
+
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.homeBtn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(79,163,255,0.6);
 }

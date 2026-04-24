@@ -4,17 +4,31 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>猜數字遊戲</title>
+
+    <!-- ✅ 加這行 -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div>
-    <h1>猜數字遊戲</h1>
+  <div class="container"> <!-- ✅ 加 class -->
+    <h1>🎯 猜數字遊戲</h1>
+
     <label for="guessField">猜一個數字 (1 到 100):</label>
     <input type="number" class="guessField" id="guessField" min="1" max="100">
+
+    <br><br>
+
     <button class="guessSubmit">提交</button>
+    <button class="restartBtn">重新開始</button>
+
+    <p class="guesses">猜過的數字：</p>
+    <p class="count">猜測次數：0</p>
+    <a href="index.html" class="homeBtn">🏠 回到主頁</a>
+
+
     <div class="result"></div>
-    <div class="count"></div>
   </div>
 
+  <script src="guess.js"></script>
 </body>
 </html>
