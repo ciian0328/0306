@@ -20,11 +20,11 @@ function checkGuess() {
     countNum++;
     count.textContent = "猜測次數：" + countNum;
 
-    // 👉 美化猜測紀錄（變成 tag）
-    const span = document.createElement("span");
-    span.textContent = userGuess;
-    span.classList.add("guess-tag");
-    guesses.appendChild(span);
+    if (guesses.textContent.trim() === "") {
+    guesses.textContent = userGuess;
+    } else {
+        guesses.textContent += "、" + userGuess;
+    }
 
     if (userGuess === answer) {
         result.textContent = "🎉 猜對了！";
@@ -71,3 +71,10 @@ function setGameOver() {
         alert("遊戲結束 🎮");
     }, 200);
 }
+
+guessField.addEventListener("keydown", function (e) {
+    if (e.key === "Enter") {
+        e.preventDefault(); // 防止刷新
+        checkGuess();
+    }
+});

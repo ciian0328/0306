@@ -1,0 +1,169 @@
+/* 🌼 整體背景 */
+body {
+    background-color: #eaf6ff;
+    background-image: url(https://i.imgur.com/0C1CQ84.png);
+    background-repeat: repeat-x;
+
+    font-family: "微軟正黑體", "Noto Sans TC", sans-serif;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* 🌸 主框 */
+#wrap {
+    max-width: 900px;
+    width: 90%;
+    margin: 40px auto;
+    padding: 40px;
+
+    border-radius: 25px;
+    border: 2px solid #a7d8ff;
+
+    background-color: rgba(255,255,255,0.9);
+    box-shadow: 0 10px 25px rgba(0,80,150,0.15);
+
+    text-align: center;
+}
+
+/* 🧭 導覽列 */
+header nav ul {
+    display: flex;
+    justify-content: center;
+
+    border-top: 2px solid #7fbce9;
+    border-bottom: 2px solid #7fbce9;
+
+    background-color: rgba(180,220,255,0.3);
+    backdrop-filter: blur(6px);
+
+    padding: 12px 0;
+    margin: 0;
+    list-style: none;
+}
+
+header nav ul li {
+    margin: 0 20px;
+}
+
+header nav ul li a {
+    font-size: 18px;
+    font-weight: bold;
+    color: #2f5f8f;
+    text-decoration: none;
+
+    padding: 6px 12px;
+    border-radius: 20px;
+
+    transition: 0.3s;
+}
+
+header nav ul li a:hover {
+    background: linear-gradient(135deg, #4fa3ff, #6cc3ff);
+    color: white;
+}
+
+/* 🌟 標題 */
+h1 {
+    color: #2f7fbf;
+    font-size: 32px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+
+    text-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #3a8fd1;
+    margin-top: 40px;
+
+    border-left: 8px solid #7ec8ff;
+    background: #eef8ff;
+
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+h3 {
+    color: #2f5f8f;
+}
+
+/* 🖼 主圖 */
+.main-img {
+    width: 250px;
+    border-radius: 20px;
+    margin: 20px auto;
+
+    box-shadow: 0 6px 15px rgba(0,80,150,0.2);
+}
+
+/* 📦 角色列表 */
+.character-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* ✨ 卡片升級版 */
+.character-list li {
+    background: linear-gradient(145deg, #f7fbff, #eaf4ff);
+
+    margin: 25px auto;
+    padding: 25px;
+
+    border-radius: 20px;
+    max-width: 500px;
+
+    box-shadow: 0 6px 15px rgba(0,80,150,0.1);
+
+    transition: 0.3s;
+}
+
+/* hover動畫 */
+.character-list li:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 12px 25px rgba(0,80,150,0.2);
+}
+
+/* 🧸 角色圖片 */
+.character-list img {
+    width: 160px;
+    border-radius: 15px;
+    margin: 10px 0;
+}
+
+/* ✏️ 文字 */
+p {
+    color: #555;
+}
+
+/* 🍡 按鈕 */
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 14px 28px;
+
+    background: linear-gradient(135deg, #4fa3ff, #6cc3ff);
+    color: white;
+
+    text-decoration: none;
+    border-radius: 30px;
+
+    box-shadow: 0 8px 20px rgba(79,163,255,0.4);
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(79,163,255,0.6);
+}
+
+/* 📱 手機優化 */
+@media (max-width: 768px) {
+    #wrap {
+        padding: 25px;
+    }
+
+    .character-list li {
+        padding: 20px;
+    }
+}
